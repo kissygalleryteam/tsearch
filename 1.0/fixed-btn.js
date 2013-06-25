@@ -1,6 +1,6 @@
 KISSY.add(function (S,O ,  TripSearch ,Template ,Slide) {
-    var WIDTH = 435;
-    var HEIGHT = 350;
+    var WIDTH = 437;
+    var HEIGHT = 380;
     var MIN_WIDTH = 152;
     var MIN_HEIGHT = 30;
     var FixedSearch = function () {
@@ -59,9 +59,7 @@ KISSY.add(function (S,O ,  TripSearch ,Template ,Slide) {
 
             if (S.UA.ie === 6) {
                 S.Event.on(window , 'scroll' , S.buffer(function (){
-                    this.overlay.get('el').css({
-                        bottom:0
-                    })
+                    this.overlay.get('el')[0].className =  this.overlay.get('el')[0].className;
                 } , 100 , this) , this);
             }
         },
@@ -90,6 +88,7 @@ KISSY.add(function (S,O ,  TripSearch ,Template ,Slide) {
                 }
             });
             TripSearch[NavMap[ this.get('tabIndex')]].call(this);
+            NavMap[ this.get('tabIndex')] = '';
             this.slide.go(this.get('tabIndex'));
         },
         show        : function () {
