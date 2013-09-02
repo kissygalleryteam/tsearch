@@ -375,7 +375,7 @@ KISSY.add('gallery/tsearch/1.1/build/trip-autocomplete',function (S, Ac , Common
             return acInstance;
         }
     };
-}, {requires: ['gallery/autocomplete/1.1/index' , './common', 'node' , 'event' , 'base']});
+}, {requires: ['gallery/autocomplete/1.2/index' , './common', 'node' , 'event' , 'base']});
 /**
  * RadioButton组件
  *
@@ -998,4 +998,4 @@ KISSY.add('gallery/tsearch/1.1/build/tsearch',function (S,Base, TripAutocomplete
         }
     }});
     return Tsearch;
-}, {requires: ['base','./trip-autocomplete' , './tradio' , 'gallery/calendar/1.1/index' , 'gallery/placeholder/1.0/index' , 'gallery/offline/1.1/index' ,'./common' , 'node', 'base']});
+}, {requires: ['base','./trip-autocomplete' , './tradio' , 'gallery/calendar/1.2/index' , 'gallery/placeholder/1.0/index' , 'gallery/offline/1.1/index' ,'./common' , 'node', 'base']});
